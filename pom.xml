@@ -1,354 +1,377 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.saasovation</groupId>
-    <artifactId>saasovation</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
-                <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-    <modules>
-        <module>iddd_agilepm</module>
-        <module>iddd_collaboration</module>
-        <module>iddd_common</module>
-        <module>iddd_identityaccess</module>
-    </modules>
-    <dependencyManagement>
-        <dependencies>
+	<groupId>com.saasovation</groupId>
+	<artifactId>parent</artifactId>
+	<name>SaasOvation - Parent</name>
+	<packaging>pom</packaging>
+	<version>1.0-SNAPSHOT</version>
+	<scm>
+		<url>https://github.com/KristofLemmens/IDDD_Samples</url>
+		<connection>scm:git:git://github.com/KristofLemmens/IDDD_Samples.git</connection>
+	</scm>
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>2.4</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.1</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<modules>
+		<module>iddd_common</module>
+		<module>iddd_agilepm</module>
+		<module>iddd_collaboration</module>
+		<module>iddd_identityaccess</module>
+	</modules>
+	<dependencyManagement>
+		<dependencies>
 
-            <!-- ANTLR -->
-            <dependency>
-                <groupId>antlr</groupId>
-                <artifactId>antlr</artifactId>
-                <version>2.7.7</version>
-            </dependency>
-            <!-- ANTLR -->
+			<!-- ANTLR -->
+			<dependency>
+				<groupId>antlr</groupId>
+				<artifactId>antlr</artifactId>
+				<version>2.7.7</version>
+			</dependency>
+			<!-- ANTLR -->
 
-            <!-- ASPECTJWEAVER -->
-            <dependency>
-                <groupId>org.aspectj</groupId>
-                <artifactId>aspectjweaver</artifactId>
-                <version>1.7.2</version>
-            </dependency>
-            <!-- ASPECTJWEAVER -->
+			<!-- ASPECTJWEAVER -->
+			<dependency>
+				<groupId>org.aspectj</groupId>
+				<artifactId>aspectjweaver</artifactId>
+				<version>1.7.2</version>
+			</dependency>
+			<!-- ASPECTJWEAVER -->
 
-            <!-- CGLIB-NODEP -->
-            <dependency>
-                <groupId>cglib</groupId>
-                <artifactId>cglib-nodep</artifactId>
-                <version>2.1_3</version>
-            </dependency>
-            <!-- CGLIB-NODEP -->
+			<!-- CGLIB-NODEP -->
+			<dependency>
+				<groupId>cglib</groupId>
+				<artifactId>cglib-nodep</artifactId>
+				<version>2.1_3</version>
+			</dependency>
+			<!-- CGLIB-NODEP -->
 
-            <!-- COMMONS -->
-            <dependency>
-                <groupId>commons-codec</groupId>
-                <artifactId>commons-codec</artifactId>
-                <version>1.2</version>
-            </dependency>
-            <dependency>
-                <groupId>commons-collections</groupId>
-                <artifactId>commons-collections</artifactId>
-                <version>3.1</version>
-            </dependency>
-            <dependency>
-                <groupId>commons-dbcp</groupId>
-                <artifactId>commons-dbcp</artifactId>
-                <version>1.4</version>
-            </dependency>
-            <dependency>
-                <groupId>commons-httpclient</groupId>
-                <artifactId>commons-httpclient</artifactId>
-                <version>3.1</version>
-            </dependency>
-            <dependency>
-                <groupId>commons-logging</groupId>
-                <artifactId>commons-logging</artifactId>
-                <version>1.1.1</version>
-            </dependency>
-            <dependency>
-                <groupId>commons-pool</groupId>
-                <artifactId>commons-pool</artifactId>
-                <version>1.6</version>
-            </dependency>
-            <!-- COMMONS -->
+			<!-- COMMONS -->
+			<dependency>
+				<groupId>commons-codec</groupId>
+				<artifactId>commons-codec</artifactId>
+				<version>1.2</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-collections</groupId>
+				<artifactId>commons-collections</artifactId>
+				<version>3.1</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-dbcp</groupId>
+				<artifactId>commons-dbcp</artifactId>
+				<version>1.4</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-httpclient</groupId>
+				<artifactId>commons-httpclient</artifactId>
+				<version>3.1</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-logging</groupId>
+				<artifactId>commons-logging</artifactId>
+				<version>1.1.1</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-pool</groupId>
+				<artifactId>commons-pool</artifactId>
+				<version>1.6</version>
+			</dependency>
+			<!-- COMMONS -->
 
-            <!-- DOM4J -->
-            <dependency>
-                <groupId>dom4j</groupId>
-                <artifactId>dom4j</artifactId>
-                <version>1.6.1</version>
-            </dependency>
-            <!-- DOM4J -->
+			<!-- DOM4J -->
+			<dependency>
+				<groupId>dom4j</groupId>
+				<artifactId>dom4j</artifactId>
+				<version>1.6.1</version>
+			</dependency>
+			<!-- DOM4J -->
 
-            <!-- GSON -->
-            <dependency>
-                <groupId>com.google.code.gson</groupId>
-                <artifactId>gson</artifactId>
-                <version>2.1</version>
-            </dependency>
-            <!-- GSON -->
+			<!-- GSON -->
+			<dependency>
+				<groupId>com.google.code.gson</groupId>
+				<artifactId>gson</artifactId>
+				<version>2.1</version>
+			</dependency>
+			<!-- GSON -->
 
-            <!-- GUAVA -->
-            <dependency>
-                <groupId>com.google.guava</groupId>
-                <artifactId>guava</artifactId>
-                <version>12.0</version>
-            </dependency>
-            <!-- GUAVA -->
+			<!-- GUAVA -->
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>12.0</version>
+			</dependency>
+			<!-- GUAVA -->
 
-            <!-- HIBERNATE -->
-            <dependency>
-                <groupId>org.hibernate</groupId>
-                <artifactId>hibernate-core</artifactId>
-                <version>3.6.3.Final</version>
-            </dependency>
-            <!-- HIBERNATE -->
+			<!-- HIBERNATE -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+				<version>3.6.3.Final</version>
+			</dependency>
+			<!-- HIBERNATE -->
 
-            <!-- JAVASSIST -->
-            <dependency>
-                <groupId>javassist</groupId>
-                <artifactId>javassist</artifactId>
-                <version>3.8.0.GA</version>
-            </dependency>
-            <!-- JAVASSIST -->
+			<!-- JAVASSIST -->
+			<dependency>
+				<groupId>javassist</groupId>
+				<artifactId>javassist</artifactId>
+				<version>3.8.0.GA</version>
+			</dependency>
+			<!-- JAVASSIST -->
 
-            <!-- JAXRS -->
-            <dependency>
-                <groupId>org.jboss.resteasy</groupId>
-                <artifactId>jaxrs-api</artifactId>
-                <version>${resteasy.version}</version>
-            </dependency>
-            <!-- JAXRS -->
+			<!-- JAXRS -->
+			<dependency>
+				<groupId>org.jboss.resteasy</groupId>
+				<artifactId>jaxrs-api</artifactId>
+				<version>${resteasy.version}</version>
+			</dependency>
+			<!-- JAXRS -->
 
-            <!-- JETTISON -->
-            <dependency>
-                <groupId>org.codehaus.jettison</groupId>
-                <artifactId>jettison</artifactId>
-                <version>1.2</version>
-            </dependency>
-            <!-- JETTISON -->
+			<!-- JETTISON -->
+			<dependency>
+				<groupId>org.codehaus.jettison</groupId>
+				<artifactId>jettison</artifactId>
+				<version>1.2</version>
+			</dependency>
+			<!-- JETTISON -->
 
-            <!-- JTA -->
-            <dependency>
-                <groupId>javax.transaction</groupId>
-                <artifactId>jta</artifactId>
-                <version>1.1</version>
-            </dependency>
-            <!-- JTA -->
+			<!-- JTA -->
+			<dependency>
+				<groupId>javax.transaction</groupId>
+				<artifactId>jta</artifactId>
+				<version>1.1</version>
+			</dependency>
+			<!-- JTA -->
 
-            <!-- JUNIT -->
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>4.8.2</version>
-                <scope>test</scope>
-            </dependency>
-            <!-- JUNIT -->
+			<!-- JUNIT -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.8.2</version>
+				<scope>test</scope>
+			</dependency>
+			<!-- JUNIT -->
 
-            <!-- LEVELDB -->
-            <dependency>
-                <groupId>org.iq80.leveldb</groupId>
-                <artifactId>leveldb</artifactId>
-                <version>0.5</version>
-            </dependency>
-            <dependency>
-                <groupId>org.iq80.leveldb</groupId>
-                <artifactId>leveldb-api</artifactId>
-                <version>0.5</version>
-            </dependency>
-            <!-- LEVELDB -->
+			<!-- LEVELDB -->
+			<dependency>
+				<groupId>org.iq80.leveldb</groupId>
+				<artifactId>leveldb</artifactId>
+				<version>0.5</version>
+			</dependency>
+			<dependency>
+				<groupId>org.iq80.leveldb</groupId>
+				<artifactId>leveldb-api</artifactId>
+				<version>0.5</version>
+			</dependency>
+			<!-- LEVELDB -->
 
-            <!-- MAIL -->
-            <dependency>
-                <groupId>javax.mail</groupId>
-                <artifactId>mail</artifactId>
-                <version>1.4</version>
-            </dependency>
-            <!-- MAIL -->
+			<!-- MAIL -->
+			<dependency>
+				<groupId>javax.mail</groupId>
+				<artifactId>mail</artifactId>
+				<version>1.4</version>
+			</dependency>
+			<!-- MAIL -->
 
-            <!-- MYSQL -->
-            <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>5.1.6</version>
-            </dependency>
-            <!-- MYSQL -->
+			<!-- MYSQL -->
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>5.1.6</version>
+			</dependency>
+			<!-- MYSQL -->
 
-            <!-- PERSISTENCE-API -->
-            <dependency>
-                <groupId>javax.persistence</groupId>
-                <artifactId>persistence-api</artifactId>
-                <version>1.0</version>
-            </dependency>
-            <!-- PERSISTENCE-API -->
+			<!-- PERSISTENCE-API -->
+			<dependency>
+				<groupId>javax.persistence</groupId>
+				<artifactId>persistence-api</artifactId>
+				<version>1.0</version>
+			</dependency>
+			<!-- PERSISTENCE-API -->
 
-            <!-- RABBITMQ -->
-            <dependency>
-                <groupId>com.rabbitmq</groupId>
-                <artifactId>amqp-client</artifactId>
-                <version>3.0.4</version>
-            </dependency>
-            <!-- RABBITMQ -->
+			<!-- RABBITMQ -->
+			<dependency>
+				<groupId>com.rabbitmq</groupId>
+				<artifactId>amqp-client</artifactId>
+				<version>3.0.4</version>
+			</dependency>
+			<!-- RABBITMQ -->
 
-            <!-- RESTEASY -->
-            <dependency>
-                <groupId>org.jboss.resteasy</groupId>
-                <artifactId>resteasy-atom-provider</artifactId>
-                <version>${resteasy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jboss.resteasy</groupId>
-                <artifactId>resteasy-cache-core</artifactId>
-                <version>${resteasy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jboss.resteasy</groupId>
-                <artifactId>resteasy-cdi</artifactId>
-                <version>${resteasy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jboss.resteasy</groupId>
-                <artifactId>resteasy-fastinfoset-provider</artifactId>
-                <version>${resteasy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jboss.resteasy</groupId>
-                <artifactId>resteasy-guice</artifactId>
-                <version>${resteasy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jboss.resteasy</groupId>
-                <artifactId>resteasy-jackson-provider</artifactId>
-                <version>${resteasy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jboss.resteasy</groupId>
-                <artifactId>resteasy-jaxb-provider</artifactId>
-                <version>${resteasy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jboss.resteasy</groupId>
-                <artifactId>resteasy-jaxrs</artifactId>
-                <version>${resteasy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jboss.resteasy</groupId>
-                <artifactId>resteasy-jettison-provider</artifactId>
-                <version>${resteasy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jboss.resteasy</groupId>
-                <artifactId>resteasy-jsapi</artifactId>
-                <version>${resteasy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jboss.resteasy</groupId>
-                <artifactId>resteasy-links</artifactId>
-                <version>${resteasy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jboss.resteasy</groupId>
-                <artifactId>resteasy-multipart-provider</artifactId>
-                <version>${resteasy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jboss.resteasy</groupId>
-                <artifactId>resteasy-oauth</artifactId>
-                <version>${resteasy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jboss.resteasy</groupId>
-                <artifactId>resteasy-spring</artifactId>
-                <version>${resteasy.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.jboss.resteasy</groupId>
-                <artifactId>resteasy-yaml-provider</artifactId>
-                <version>${resteasy.version}</version>
-            </dependency>
-            <!-- RESTEASY -->
+			<!-- RESTEASY -->
+			<dependency>
+				<groupId>org.jboss.resteasy</groupId>
+				<artifactId>resteasy-atom-provider</artifactId>
+				<version>${resteasy.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.resteasy</groupId>
+				<artifactId>resteasy-cache-core</artifactId>
+				<version>${resteasy.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.resteasy</groupId>
+				<artifactId>resteasy-cdi</artifactId>
+				<version>${resteasy.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.resteasy</groupId>
+				<artifactId>resteasy-fastinfoset-provider</artifactId>
+				<version>${resteasy.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.resteasy</groupId>
+				<artifactId>resteasy-guice</artifactId>
+				<version>${resteasy.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.resteasy</groupId>
+				<artifactId>resteasy-jackson-provider</artifactId>
+				<version>${resteasy.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.resteasy</groupId>
+				<artifactId>resteasy-jaxb-provider</artifactId>
+				<version>${resteasy.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.resteasy</groupId>
+				<artifactId>resteasy-jaxrs</artifactId>
+				<version>${resteasy.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.resteasy</groupId>
+				<artifactId>resteasy-jettison-provider</artifactId>
+				<version>${resteasy.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.resteasy</groupId>
+				<artifactId>resteasy-jsapi</artifactId>
+				<version>${resteasy.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.resteasy</groupId>
+				<artifactId>resteasy-links</artifactId>
+				<version>${resteasy.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.resteasy</groupId>
+				<artifactId>resteasy-multipart-provider</artifactId>
+				<version>${resteasy.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.resteasy</groupId>
+				<artifactId>resteasy-oauth</artifactId>
+				<version>${resteasy.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.resteasy</groupId>
+				<artifactId>resteasy-spring</artifactId>
+				<version>${resteasy.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.jboss.resteasy</groupId>
+				<artifactId>resteasy-yaml-provider</artifactId>
+				<version>${resteasy.version}</version>
+			</dependency>
+			<!-- RESTEASY -->
 
-            <!-- SCANNOTATION -->
-            <dependency>
-                <groupId>org.scannotation</groupId>
-                <artifactId>scannotation</artifactId>
-                <version>1.0.2</version>
-            </dependency>
-            <!-- SCANNOTATION -->
+			<!-- SCANNOTATION -->
+			<dependency>
+				<groupId>org.scannotation</groupId>
+				<artifactId>scannotation</artifactId>
+				<version>1.0.2</version>
+			</dependency>
+			<!-- SCANNOTATION -->
 
-            <!-- SERVLET-API -->
-            <dependency>
-                <groupId>javax.servlet</groupId>
-                <artifactId>servlet-api</artifactId>
-                <version>2.5</version>
-            </dependency>
-            <!-- SERVLET-API -->
+			<!-- SERVLET-API -->
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>2.5</version>
+			</dependency>
+			<!-- SERVLET-API -->
 
-            <!-- SLF4J -->
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-                <version>${slf4j.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-simple</artifactId>
-                <version>${slf4j.version}</version>
-            </dependency>
-            <!-- SLF4J -->
+			<!-- SLF4J -->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-simple</artifactId>
+				<version>${slf4j.version}</version>
+			</dependency>
+			<!-- SLF4J -->
 
-            <!-- SNAPPY -->
-            <dependency>
-                <groupId>org.iq80.snappy</groupId>
-                <artifactId>snappy</artifactId>
-                <version>0.2</version>
-            </dependency>
-            <!-- SNAPPY -->
+			<!-- SNAPPY -->
+			<dependency>
+				<groupId>org.iq80.snappy</groupId>
+				<artifactId>snappy</artifactId>
+				<version>0.2</version>
+			</dependency>
+			<!-- SNAPPY -->
 
-            <!-- SPRING -->
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-context</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-            	<groupId>org.springframework</groupId>
-            	<artifactId>spring-tx</artifactId>
-            	<version>${spring.version}</version>
-            </dependency>
-            <!-- SPRING -->
+			<!-- SPRING -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-orm</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-tx</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<!-- SPRING -->
 
-            <!-- TJWS -->
-            <dependency>
-                <groupId>org.jboss.resteasy</groupId>
-                <artifactId>tjws</artifactId>
-                <version>${resteasy.version}</version>
-            </dependency>
-            <!-- TJWS -->
+			<!-- TJWS -->
+			<dependency>
+				<groupId>org.jboss.resteasy</groupId>
+				<artifactId>tjws</artifactId>
+				<version>${resteasy.version}</version>
+			</dependency>
+			<!-- TJWS -->
 
-        </dependencies>
-    </dependencyManagement>
-    <properties>
-        <java.version>1.7</java.version>
-        <resteasy.version>2.0.1.GA</resteasy.version>
-        <slf4j.version>1.5.8</slf4j.version>
-        <spring.version>3.2.2.RELEASE</spring.version>
-    </properties>
+		</dependencies>
+	</dependencyManagement>
+	<properties>
+		<java.version>1.7</java.version>
+		<resteasy.version>2.0.1.GA</resteasy.version>
+		<slf4j.version>1.5.8</slf4j.version>
+		<spring.version>3.2.2.RELEASE</spring.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 
 
 </project>

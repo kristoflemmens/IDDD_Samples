@@ -45,8 +45,10 @@ public abstract class DomainTest extends TestCase {
         applicationContext =
                 new ClassPathXmlApplicationContext(
                         new String[] {
-                                "applicationContext-identityaccess.xml",
-                                "applicationContext-common.xml" });
+                                "spring/applicationContext-identityaccess.xml",
+                                "spring/applicationContext-identityaccess-test.xml",
+                                "spring/applicationContext-identityaccess-application.xml",
+                                "spring/applicationContext-common.xml" });
 
         this.sessionProvider =
                 (SpringHibernateSessionProvider) applicationContext.getBean("sessionProvider");

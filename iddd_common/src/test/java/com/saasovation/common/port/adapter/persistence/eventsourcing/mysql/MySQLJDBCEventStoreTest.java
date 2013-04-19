@@ -14,29 +14,21 @@
 
 package com.saasovation.common.port.adapter.persistence.eventsourcing.mysql;
 
+import com.saasovation.common.domain.model.DomainEvent;
+import com.saasovation.common.domain.model.DomainEventPublisher;
+import com.saasovation.common.event.TestableDomainEvent;
+import com.saasovation.common.event.sourcing.*;
+import junit.framework.TestCase;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
-
-import javax.sql.DataSource;
-
-import junit.framework.TestCase;
-
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import com.saasovation.common.domain.model.DomainEvent;
-import com.saasovation.common.domain.model.DomainEventPublisher;
-import com.saasovation.common.event.TestableDomainEvent;
-import com.saasovation.common.event.sourcing.DispatchableDomainEvent;
-import com.saasovation.common.event.sourcing.EventStore;
-import com.saasovation.common.event.sourcing.EventStoreAppendException;
-import com.saasovation.common.event.sourcing.EventStoreException;
-import com.saasovation.common.event.sourcing.EventStream;
-import com.saasovation.common.event.sourcing.EventStreamId;
 
 public class MySQLJDBCEventStoreTest extends TestCase {
 
@@ -207,7 +199,7 @@ public class MySQLJDBCEventStoreTest extends TestCase {
 
         DomainEventPublisher.instance().reset();
 
-        applicationContext = new ClassPathXmlApplicationContext("applicationContext-common.xml");
+        applicationContext = new ClassPathXmlApplicationContext("spring/applicationContext-common.xml");
 
         this.eventStore = MySQLJDBCEventStore.instance();
     }

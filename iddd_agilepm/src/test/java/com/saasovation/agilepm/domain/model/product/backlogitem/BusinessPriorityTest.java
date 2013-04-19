@@ -39,7 +39,7 @@ public class BusinessPriorityTest extends DomainTest {
 
         float cost = businessPriority.costPercentage(totals);
 
-        assertEquals("2.7", this.oneDecimal().format(cost));
+        assertEquals("2,7", this.oneDecimal().format(cost));
 
         assertEquals(businessPriorityCopy, businessPriority);
     }
@@ -59,7 +59,7 @@ public class BusinessPriorityTest extends DomainTest {
 
         float calculatedPriority = businessPriority.priority(totals);
 
-        assertEquals("1.03", this.twoDecimals().format(calculatedPriority));
+        assertEquals("1,03", this.twoDecimals().format(calculatedPriority));
 
         assertEquals(businessPriorityCopy, businessPriority);
     }
@@ -76,7 +76,7 @@ public class BusinessPriorityTest extends DomainTest {
 
         float totalValue = businessPriority.totalValue();
 
-        assertEquals("6.0", this.oneDecimal().format(totalValue));
+        assertEquals("6,0", this.oneDecimal().format(totalValue));
 
         assertEquals(businessPriorityCopy, businessPriority);
     }
@@ -96,7 +96,7 @@ public class BusinessPriorityTest extends DomainTest {
 
         float valuePercentage = businessPriority.valuePercentage(totals);
 
-        assertEquals("5.9", this.oneDecimal().format(valuePercentage));
+        assertEquals("5,9", this.oneDecimal().format(valuePercentage));
 
         assertEquals(businessPriorityCopy, businessPriority);
     }
